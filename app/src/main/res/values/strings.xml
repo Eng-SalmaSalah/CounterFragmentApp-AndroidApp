@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyDiary</string>
+    <string name="closeBtn">Close</string>
+    <string name="noteBody">Note Body</string>
+    <string name="noteName">Note Name</string>
+    <string name="nextBtn">Next</string>
+    <string name="saveInFile">Save In File</string>
+    <string name="loadFromFile">Load From File</string>
+    <string name="saveInDB">Save In Database</string>
+    <string name="loadFromDB">Load From DataBase</string>
+    <string name="userName">User Name</string>
+    <string name="password">Password</string>
+    <string name="Login">Login</string>
+    <string name="register">Register</string>
+</resources>
