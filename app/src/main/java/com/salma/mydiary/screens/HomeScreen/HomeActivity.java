@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.Home
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        homePresenter = new HomePresenterImpl(this,getApplicationContext());
+        homePresenter = new HomePresenterImpl(this);
 
         boolean loggedIn = homePresenter.checkIfLoggedIn();
         if (loggedIn) {

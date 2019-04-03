@@ -1,52 +1,50 @@
 package com.salma.mydiary.screens.HomeScreen;
 
-import android.content.Context;
-
 import com.salma.mydiary.model.dataBase.SharedPreferencesManager;
 import com.salma.mydiary.model.dataBase.SharedPreferencesManagerImpl;
 
 public class HomePresenterImpl implements HomeContract.HomePresenter {
-    private HomeContract.HomeView homeView;
-    private SharedPreferencesManager sharedPrefrencesManager;
+    private HomeContract.HomeView _homeView;
+    private SharedPreferencesManager sharedPreferencesManager;
 
-    public HomePresenterImpl(HomeContract.HomeView homeView, Context context) {
-        this.homeView = homeView;
-        sharedPrefrencesManager = new SharedPreferencesManagerImpl(this, context);
+    public HomePresenterImpl(HomeContract.HomeView homeView) {
+        this._homeView = homeView;
+        sharedPreferencesManager = new SharedPreferencesManagerImpl(this, _homeView);
 
     }
 
     @Override
     public void login(String userName, String password) {
-        sharedPrefrencesManager.checkLoggedInUser(userName, password);
+        sharedPreferencesManager.checkLoggedInUser(userName, password);
     }
 
     @Override
     public void register(String userName, String password) {
-        sharedPrefrencesManager.addUser(userName, password);
+        sharedPreferencesManager.addUser(userName, password);
     }
 
     @Override
     public void announceValidLogin() {
-        homeView.respondToValidLogin();
+        _homeView.respondToValidLogin();
     }
 
     @Override
     public void announceInvalidLogin() {
-        homeView.respondToInvalidLogin();
+        _homeView.respondToInvalidLogin();
     }
 
     @Override
     public void announceValidRegistration() {
-        homeView.respondToValidRegistration();
+        _homeView.respondToValidRegistration();
     }
 
     @Override
     public void announceInvalidRegistration() {
-        homeView.respondToInvalidRegistration();
+        _homeView.respondToInvalidRegistration();
     }
 
     @Override
     public boolean checkIfLoggedIn() {
-        return sharedPrefrencesManager.checkRememberMe();
+        return sharedPreferencesManager.checkRememberMe();
     }
 }

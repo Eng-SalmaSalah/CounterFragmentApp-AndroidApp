@@ -12,9 +12,9 @@ public class SharedPreferencesManagerImpl implements SharedPreferencesManager {
     private HomeContract.HomePresenter homePresenter;
     private Context context;
 
-    public SharedPreferencesManagerImpl(HomeContract.HomePresenter homePresenter, Context context) {
+    public SharedPreferencesManagerImpl(HomeContract.HomePresenter homePresenter, HomeContract.HomeView homeView) {
         this.homePresenter = homePresenter;
-        this.context = context;
+        this.context = (Context)homeView;
     }
 
     @Override
