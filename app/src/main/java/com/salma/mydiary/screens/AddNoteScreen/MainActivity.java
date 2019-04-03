@@ -1,4 +1,4 @@
-package com.salma.mydiary;
+package com.salma.mydiary.screens.AddNoteScreen;
 
 
 
@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.salma.mydiary.R;
+import com.salma.mydiary.screens.NoteScreen.NoteActivity;
 
 public class MainActivity extends AppCompatActivity {
 

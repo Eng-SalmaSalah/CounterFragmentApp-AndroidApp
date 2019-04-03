@@ -1,4 +1,4 @@
-package com.salma.mydiary;
+package com.salma.mydiary.model;
 public class Note {
     private String noteName;
     private String noteBody;

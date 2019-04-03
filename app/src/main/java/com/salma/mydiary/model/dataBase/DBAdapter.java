@@ -1,12 +1,12 @@
-package com.salma.mydiary;
+package com.salma.mydiary.model.dataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
+
+import com.salma.mydiary.model.Note;
 
 
 public class DBAdapter {

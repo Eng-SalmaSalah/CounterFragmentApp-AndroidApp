@@ -1,14 +1,17 @@
-package com.salma.mydiary;
+package com.salma.mydiary.screens.NoteScreen;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.salma.mydiary.model.dataBase.DBAdapter;
+import com.salma.mydiary.R;
+import com.salma.mydiary.model.Note;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
